@@ -18,6 +18,19 @@ public class Account {
         acctNumber = account;
         balance = initial;
     }
+    
+    public Account(String owner)
+    {
+    name = owner;
+    acctNumber = (int)(Math.random()*((99999 - 10000)+1) +10000);
+    balance = 0.0;
+        System.out.println("");
+        System.out.println("Account created:");
+        System.out.println("Name: "+ name);
+        System.out.println("Account Number: " + acctNumber);
+        System.out.println("Balance: " + fmt.format(balance));
+        
+    }
 //-----------------------------------------------------------------
 // Validates the transaction, then deposits the specified amount
 // into the account. Returns the new balance.
